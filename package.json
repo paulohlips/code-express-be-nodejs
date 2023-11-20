@@ -6,13 +6,18 @@
   "scripts": {
     "test": "tsc && jest ./dist",
     "start": "tsc && node ./dist/src/main.js",
-    "coverage": "tsc && jest ./dist --coverage"
+    "coverage": "tsc && jest ./dist --coverage",
+    "seed": "tsc && node ./dist/seed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/faker": "^6.6.9",
     "@types/jest": "^29.5.8",
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1"
   }
 }
