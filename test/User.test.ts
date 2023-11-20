@@ -11,4 +11,14 @@ describe("User test suite", () => {
     expect(() => new User("paulohlips", "0@gmail.com", "password", "There is my bio info"))
     .toThrow ("Invalid email")
   })
+
+  test("should not create new user with invalid username length", () => {
+    expect(() => new User("ph", "910@gmail.com", "password", "There is my bio info"))
+    .toThrow ("Choose a username greater than 3 characters")
+  })
+
+  test("should not create new user with invalid password length", () => {
+    expect(() => new User("paulohlips", "910@gmail.com", "xx", "There is my bio info"))
+    .toThrow ("Choose a password greater than 3 characters")
+  })
 })

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && jest ./dist",
-    "start": "tsc && node ./dist/src/main.js"
+    "start": "tsc && node ./dist/src/main.js",
+    "coverage": "tsc && jest ./dist --coverage"
   },
   "keywords": [],
   "author": "",
