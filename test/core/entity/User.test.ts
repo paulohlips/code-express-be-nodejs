@@ -14,7 +14,6 @@ describe("User entity test suite", () => {
   })
 
   test("should not create new user with invalid email", () => {
-    const user = Object.create(newUser)
     expect(() => new User(username, "0@gmail.com", password, bio))
     .toThrow ("Invalid email")
   })
