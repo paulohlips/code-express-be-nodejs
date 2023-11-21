@@ -1,7 +1,7 @@
 import mockedBlogPost  from "../../../seed/mocks/blogPost.json"
 import BlogPost from "../../../src/core/entity/BlogPost"
-import CreateBlogPost from "../../../src/core/useCase/CreateBlogPost"
-import GetBlogPostUseCase from "../../../src/core/useCase/GetBlogPost"
+import CreateBlogPost from "../../../src/core/useCase/BlogPostUseCase/CreateBlogPost"
+import GetBlogPostUseCase from "../../../src/core/useCase/BlogPostUseCase/GetBlogPost"
 import BlogPostRepositoryMemory from "../../../src/infrastructure/repository/BlogPostRepositoryMemory"
 
 const { title, content, authorId, status, tags } = mockedBlogPost

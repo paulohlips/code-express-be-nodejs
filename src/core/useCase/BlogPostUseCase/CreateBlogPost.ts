@@ -1,5 +1,5 @@
-import IBlogPostRepository from "../../../src/core/repository/IBlogPostRepository"
-import BlogPostDTO from "../dto/BlogPostDTO"
+import IBlogPostRepository from "../../repository/IBlogPostRepository"
+import BlogPostDTO from "../../dto/BlogPostDTO"
 
 export default class CreateBlogPost {
   constructor (private readonly blogPostRepository: IBlogPostRepository) { }
