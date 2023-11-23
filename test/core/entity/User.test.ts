@@ -20,7 +20,7 @@ describe("User entity test suite", () => {
 
   test("should not create new user with invalid username length", () => {
     expect(() => new User("ph", email, password, bio))
-    .toThrow ("Choose a username greater than 3 characters")
+    .toThrow ("Choose an username greater than 3 characters")
   })
 
   test("should not create new user with invalid password length", () => {

@@ -16,7 +16,7 @@ export default class User {
 
   private checkRequiredDateValidation (email: string, username: string, password: string) {
     if (!this.isValidEmail(email)) throw new Error("Invalid email")
-    if (username.length < 3) throw new Error("Choose a username greater than 3 characters")
+    if (username.length < 3) throw new Error("Choose an username greater than 3 characters")
     if (password.length < 3) throw new Error("Choose a password greater than 3 characters")
   }
 
