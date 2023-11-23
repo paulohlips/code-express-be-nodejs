@@ -4,7 +4,7 @@ export default class User {
   joinDate: Date
 
   constructor (
-    private readonly username: string,
+    readonly username: string,
     private readonly email: string,
     private readonly password: string,
     private readonly bio?: string
