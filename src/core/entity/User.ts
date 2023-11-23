@@ -5,9 +5,9 @@ export default class User {
 
   constructor (
     readonly username: string,
-    private readonly email: string,
+    readonly email: string,
     private readonly password: string,
-    private readonly bio?: string
+    readonly bio?: string
   ) {
     this.checkRequiredDateValidation(email, username, password)
     this.userId = randomUUID()
