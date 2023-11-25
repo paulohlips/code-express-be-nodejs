@@ -6,7 +6,7 @@ export default class User {
   constructor (
     readonly username: string,
     readonly email: string,
-    private readonly password: string,
+    readonly password: string,
     readonly bio?: string
   ) {
     this.checkRequiredDateValidation(email, username, password)
