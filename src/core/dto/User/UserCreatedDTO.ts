@@ -1,8 +1,7 @@
-export default interface UserDto {
+export default interface UserCreatedDto {
   userId: string
   username: string
   email: string
-  password?: string
   bio?: string
   joinDate: Date
 }

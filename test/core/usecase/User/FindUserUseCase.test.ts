@@ -6,7 +6,6 @@ describe("FindUserUseCase", () => {
   let userRepository: IUserRepository
   beforeEach(() => {
     userRepository = new UserRepositoryInMemory()
-
   })
   test("should find a specific user by userId", async () => {
     const userId = "595f4c6c-d52f-4f76-a6ee-f616e5ab4279"
