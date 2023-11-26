@@ -9,8 +9,8 @@ export default class BlogPostRepositoryMemory implements IBlogPostRepository {
     return blogPost
   }
 
-  async findById (postId?: string | undefined): Promise<BlogPostDTO | undefined> {
-    const post = postId ? posts.find(post => post.postId === postId) : undefined
+  async findById (postId: string | undefined): Promise<BlogPostDTO | undefined> {
+    const post = posts.find(post => post.postId === postId)
     return Promise.resolve(post)
   }
 }
