@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && jest ./dist",
-    "start": "tsc && node ./dist/src/main.js",
+    "start": "tsc && node ./dist/src/infrastructure/http/express.js",
     "coverage": "tsc && jest ./dist --coverage",
     "seed": "tsc && node ./dist/seed"
   },
