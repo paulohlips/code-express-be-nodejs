@@ -4,7 +4,7 @@ export default interface BlogPostDTO {
     content: string,
     authorId: string,
     status: string,
-    publicationDate: Date,
-    lastModifiedDate: Date,
+    publicationDate?: Date,
+    lastModifiedDate?: Date,
     tags?: string[]
 }

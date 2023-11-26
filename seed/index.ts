@@ -5,7 +5,7 @@ import User from "../src/core/entity/User"
 import BlogPost from "../src/core/entity/BlogPost"
 
 const seederBaseFolder = join(__dirname, "../", "../", "/seed", "/mocks")
-console.log({ __dirname })
+
 
 const user = new User(
   faker.person.firstName() ,
