@@ -9,17 +9,17 @@ export default class LoginUseCase {
     private readonly jwtService: IJWTService
   ) {}
 
-  async execute (userName: string, password: string) {
-    const user = await this.userRepository.findByUserName(userName)
+  async execute (email: string, password: string) {
+    const user = await this.userRepository.findByEmail(email)
 
     if (!user) {
-      throw new Error("userName or password invalid")
+      throw new Error("email or password invalid")
     }
 
     const passwordIsValid = await this.passwordHashService.checkPassword(password, user.password)
 
     if (!passwordIsValid) {
-      throw new Error("userName or password invalid")
+      throw new Error("email or password invalid")
     }
 
     return this.jwtService.createToken(user.userId)

@@ -25,19 +25,19 @@ describe("LoginUseCase test suite", () => {
   })
 
   test("Should login with success", async () => {
-    const jwt = await loginUseCase.execute(userInMemory.username, userInMemory.password)
+    const jwt = await loginUseCase.execute(userInMemory.email, userInMemory.password)
     expect(jwt).toBeDefined()
   })
 
   test("Should login fail when user not found", async () => {
-    jest.spyOn(userRepository, "findByUserName").mockReturnValueOnce(Promise.resolve(undefined))
+    jest.spyOn(userRepository, "findByEmail").mockReturnValueOnce(Promise.resolve(undefined))
     expect(() => loginUseCase.execute(userInMemory.username, userInMemory.password))
-    .rejects.toThrow(new Error("userName or password invalid"))
+    .rejects.toThrow(new Error("email or password invalid"))
   })
 
   test("Should login fail when password is incorrect", async () => {
     jest.spyOn(passwordHashService, "checkPassword").mockReturnValueOnce(Promise.resolve(false))
     expect(() => loginUseCase.execute(userInMemory.username, "0123"))
-    .rejects.toThrow(new Error("userName or password invalid"))
+    .rejects.toThrow(new Error("email or password invalid"))
   })
 })
