@@ -31,7 +31,7 @@ export default class UserRepositoryInMemory implements IUserRepository {
     return Promise.resolve(users.find(user => user.userId === userId))
   }
 
-  async findByUserName (userName: string): Promise<UserDto | undefined> {
-    return Promise.resolve(users.find(user => user.username === userName))
+  async findByEmail (email: string): Promise<UserDto | undefined> {
+    return Promise.resolve(users.find(user => user.email === email))
   }
 }
