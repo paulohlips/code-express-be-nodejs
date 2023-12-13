@@ -6,8 +6,8 @@ import CreateBlogPostDTO from "../../dto/BlogPost/CreateBlogPostDTO"
 export default class CreateBlogPostUseCase {
   constructor (private readonly blogPostRepository: IBlogPostRepository) { }
 
-    async execute ({ authorId, content, status, title }: CreateBlogPostDTO): Promise<BlogPostDTO> {
-      const blogPost = new BlogPost(authorId, content, status, title)
+    async execute ({ authorId, content, status, title, tags }: CreateBlogPostDTO): Promise<BlogPostDTO> {
+      const blogPost = new BlogPost(title, content, authorId, status, tags)
       return await this.blogPostRepository.create(blogPost)
   }
 }
