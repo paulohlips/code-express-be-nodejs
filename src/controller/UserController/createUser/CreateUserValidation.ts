@@ -17,12 +17,12 @@ class CreateUserValidation {
   @IsString()
   bio?: string
 
-  constructor (obj: InputBody) {
+  constructor (obj: Input) {
     Object.assign(this, obj)
   }
 }
 
-interface InputBody {
+interface Input {
   username: string
   email: string
   password: string
@@ -30,7 +30,7 @@ interface InputBody {
 }
 
 export default class CreateUserValidationService {
-  static async validateInput(input: InputBody): Promise<void> {
+  static async validateInput(input: Input): Promise<void> {
     try {
       const inputValidator = new CreateUserValidation(input)
       return await validateOrReject(inputValidator)

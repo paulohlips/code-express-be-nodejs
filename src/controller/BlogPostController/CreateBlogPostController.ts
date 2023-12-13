@@ -1,7 +1,7 @@
 import CreateBlogPostUseCase from "../../core/useCase/BlogPost/CreateBlogPostUseCase"
 import BlogPostRepositoryInMemory from "../../infrastructure/repository/BlogPostRepositoryInMemory"
 
-interface InputBody {
+interface Input {
   title: string
   content: string
   authorId: string
@@ -10,7 +10,7 @@ interface InputBody {
 }
 
 export default class CreateBlogPostController {
-  static async createBlogPost (params: any, { title, content, authorId, status, tags }: InputBody ) {
+  static async createBlogPost (params: any, { title, content, authorId, status, tags }: Input ) {
     const userRepository = new BlogPostRepositoryInMemory()
     const createBlogPostUseCase = new CreateBlogPostUseCase(userRepository)
     return await createBlogPostUseCase.execute({ title, content, authorId, status, tags })

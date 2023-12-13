@@ -4,7 +4,7 @@ import PasswordHashService from "../../../infrastructure/service/PasswordHashSer
 import CreateUserValidationService from "./CreateUserValidation"
 import ValidationError from "../../../errors/validationError"
 
-interface InputBody {
+interface Input {
   username: string
   email: string
   password: string
@@ -12,7 +12,7 @@ interface InputBody {
 }
 
 export default class CreateUserController {
-  static async createUser (params: any, { username, email, password, bio }: InputBody ) {
+  static async createUser (params: any, { username, email, password, bio }: Input ) {
 
     try {
       await CreateUserValidationService.validateInput({ username, email, password, bio })

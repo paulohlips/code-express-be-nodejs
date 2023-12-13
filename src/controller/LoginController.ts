@@ -3,7 +3,7 @@ import UserRepositoryInMemory from "../infrastructure/repository/UserRepositoryI
 import JWTService from "../infrastructure/service/JWTService"
 import PasswordHashService from "../infrastructure/service/PasswordHashService"
 
-interface InputBody {
+interface Input {
   email: string
   password: string
 }
@@ -14,7 +14,7 @@ interface Output {
 
 export default class LoginController {
 
-  static async login (paramters: any, body: InputBody): Promise<Output> {
+  static async login (paramters: any, body: Input): Promise<Output> {
     const userRepository = new UserRepositoryInMemory()
     const passwordHashService = new PasswordHashService()
     const jwtService =  new JWTService ()
