@@ -10,7 +10,7 @@ class CreateUserValidation {
   email!: string
 
   @IsString()
-  @Length(6, 30)
+  @Length(3, 30)
   password!: string
 
   @IsOptional()
