@@ -4,14 +4,6 @@ import IUserRepository from "../../core/repository/IUserRepository";
 
 const users: UserDto[] = [
   {
-    username: "Shanie",
-    email: "Tyrese2@gmail.com",
-    password: "08I2ZCsL5zHvYh2",
-    bio: "author",
-    userId: "595f4c6c-d52f-4f76-a6ee-f616e5ab4279",
-    joinDate: new Date()
-  },
-  {
     username: "Evans",
     email: "Madonna4@yahoo.com",
     password: "$2b$10$L/bk8IxE9/rWdvPJ1nfxaOggdFvXeKe2cq3eN3lq9oa.Rdj2AtVn6",
